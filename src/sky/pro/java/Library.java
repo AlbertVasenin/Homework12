@@ -46,6 +46,12 @@ public class Library {
             books[i].getAuthor().getLastName(), books[i].getPublicationYear());
       }
     }
-
+  }
+  public void setYearPublication(String nameBook, int year){
+    for (int i = 0; i < books.length; i++) {
+      if(books[i]!= null && books[i].getNameBook().equals(nameBook)){
+        books[i].setPublicationYear(year);
+      }
+    }
   }
 }

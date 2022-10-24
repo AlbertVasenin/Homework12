@@ -26,6 +26,9 @@ public class Main {
     library.printFreePlaceInTheLibrary();
     System.out.println();
     library.printInfoAboutBook("Братья Карамазовы");
+    System.out.println();
+    library.setYearPublication("Братья Карамазовы", 1890);
+    library.printInfoAboutBook("Братья Карамазовы");
   }
 
 
