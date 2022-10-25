@@ -27,6 +27,26 @@ public class Book {
   public void setPublicationYear(int publicationYear) {
     this.publicationYear = publicationYear;
   }
+
+  @Override
+  public String toString() {
+    return nameBook + ": " + author + " " + publicationYear;
+  }
+
+  @Override
+  public int hashCode() {
+    return java.util.Objects.hash(nameBook, author, publicationYear);
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (obj instanceof Book) {
+      Book b = (Book) obj;
+      return (nameBook.equals(b.nameBook) && author.equals(
+          b.author) && publicationYear == b.publicationYear);
+    }
+    return false;
+  }
 }
 
 

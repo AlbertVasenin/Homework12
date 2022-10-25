@@ -29,7 +29,12 @@ public class Main {
     System.out.println();
     library.setYearPublication("Братья Карамазовы", 1890);
     library.printInfoAboutBook("Братья Карамазовы");
+    Author authorSix = new Author("Какой-то", "Автор");
+    Book bookSix = new Book("Жили были", authorSix, 2022);
+    System.out.println();
+    System.out.println(bookSix);
+    System.out.println(bookSix.hashCode());
+    System.out.println(bookSix.equals(bookFive));
+    System.out.println(authorFour.equals(authorFive));
   }
-
-
 }

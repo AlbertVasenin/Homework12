@@ -2,8 +2,8 @@ package sky.pro.java;
 
 public class Author {
 
-  private String name;
-  private String lastName;
+  final private String name;
+  final private String lastName;
 
   public Author(String name, String lastName) {
     this.name = name;
@@ -16,5 +16,24 @@ public class Author {
 
   public String getLastName() {
     return lastName;
+  }
+
+  @Override
+  public String toString() {
+    return name + " " + lastName;
+  }
+
+  @Override
+  public int hashCode() {
+    return java.util.Objects.hash(name, lastName);
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (obj instanceof Author) {
+      Author a = (Author) obj;
+      return (name.equals(a.name) && lastName.equals(a.lastName));
+    }
+    return false;
   }
 }
