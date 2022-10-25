@@ -30,10 +30,14 @@ public class Author {
 
   @Override
   public boolean equals(Object obj) {
-    if (obj instanceof Author) {
-      Author a = (Author) obj;
-      return (name.equals(a.name) && lastName.equals(a.lastName));
+    if (this == obj) {
+      return true;
     }
-    return false;
+    if (obj == null || getClass() != obj.getClass()) {
+      return false;
+    }
+    Author a = (Author) obj;
+    return (name.equals(a.name) && lastName.equals(a.lastName));
   }
 }
+

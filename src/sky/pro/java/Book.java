@@ -40,12 +40,15 @@ public class Book {
 
   @Override
   public boolean equals(Object obj) {
-    if (obj instanceof Book) {
-      Book b = (Book) obj;
-      return (nameBook.equals(b.nameBook) && author.equals(
-          b.author) && publicationYear == b.publicationYear);
+    if (this == obj) {
+      return true;
     }
-    return false;
+    if (obj == null || getClass() != obj.getClass()) {
+      return false;
+    }
+    Book b = (Book) obj;
+    return (nameBook.equals(b.nameBook) && author.equals(
+        b.author) && publicationYear == b.publicationYear);
   }
 }
 
